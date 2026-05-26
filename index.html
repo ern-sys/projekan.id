@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekan.ID — Software & Tech Team</title>
+  <meta name="description" content="Projekan.ID adalah tim developer & tech enthusiast yang mengerjakan proyek software dari ideasi hingga deployment." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <link rel="stylesheet" href="css/team.css" />
+  <link rel="stylesheet" href="css/cta.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-dot"></span>
+      Projekan<span class="accent">.ID</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Diskusi Project →
+    </button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- SECTIONS -->
+  <main>
+    <section id="hero-section">
+      <!-- hero.js akan render konten ini -->
+    </section>
+
+    <div class="full-divider"></div>
+
+    <section id="services">
+      <!-- services.js akan render konten ini -->
+    </section>
+
+    <div class="full-divider"></div>
+
+    <section id="portfolio">
+      <!-- portfolio.js akan render konten ini -->
+    </section>
+
+    <div class="full-divider"></div>
+
+    <section id="team">
+      <!-- team.js akan render konten ini -->
+    </section>
+
+    <div class="full-divider"></div>
+
+    <section id="contact">
+      <!-- cta.js akan render konten ini -->
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <!-- footer.js akan render konten ini -->
+  </footer>
+
+  <!-- JS — urutan penting -->
+  <script src="js/data.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/team.js"></script>
+  <script src="js/cta.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

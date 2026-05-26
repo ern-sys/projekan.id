@@ -1,0 +1,152 @@
+/* ============================================
+   base.css — CSS Variables, Reset, Utilities
+   ============================================ */
+
+:root {
+  --bg:           #F7F6F2;
+  --surface:      #FFFFFF;
+  --surface2:     #F0EEE8;
+  --border:       #E2DDD4;
+  --ink:          #16140F;
+  --ink2:         #5C5849;
+  --ink3:         #9C9589;
+  --accent:       #1A56FF;
+  --accent2:      #0A36CC;
+  --accent-light: #EBF0FF;
+  --green:        #16A34A;
+  --green-light:  #DCFCE7;
+  --amber:        #D97706;
+  --r:            12px;
+  --r-sm:         8px;
+  --max-w:        1200px;
+  --pad-x:        clamp(20px, 5vw, 64px);
+  --pad-y:        clamp(60px, 8vw, 100px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Shared Section ── */
+main > section {
+  padding: var(--pad-y) var(--pad-x);
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.full-divider {
+  height: 1px;
+  background: var(--border);
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* ── Section Labels ── */
+.section-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--ink);
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.section-sub {
+  font-size: 17px;
+  color: var(--ink2);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 13px 28px;
+  border-radius: var(--r-sm);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all .2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-primary:hover {
+  background: var(--accent2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26,86,255,.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  padding: 13px 28px;
+  border-radius: var(--r-sm);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all .2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-secondary:hover {
+  border-color: var(--ink);
+  background: var(--surface2);
+}
+
+/* ── Shared Tag / Chip ── */
+.tag {
+  background: var(--surface2);
+  color: var(--ink2);
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'DM Mono', monospace;
+}
+
+/* ── Color Accent Helper ── */
+.accent { color: var(--accent); }
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

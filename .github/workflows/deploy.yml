@@ -1,0 +1,55 @@
+# .github/workflows/deploy.yml
+#
+# Auto-deploy ke GitHub Pages setiap kali ada push ke branch main.
+# Tidak butuh setup tambahan — GitHub Pages static hosting gratis.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main        # ganti ke "master" kalau branch utama lu namanya master
+
+  # Bisa juga trigger manual dari tab Actions di GitHub
+  workflow_dispatch:
+
+# Izin untuk nulis ke GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Pastikan hanya satu deploy yang jalan dalam satu waktu
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # 1. Checkout kode dari repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # 3. Upload semua file sebagai artifact Pages
+      #    "." artinya upload dari root folder repo
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      # 4. Deploy ke GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
