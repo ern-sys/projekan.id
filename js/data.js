@@ -10,9 +10,9 @@ const SITE_DATA = {
   site: {
     name:      "Projekan.ID",
     tagline:   "Software & Tech Team",
-    email:     "halo@projekan.id",
-    whatsapp:  "6281234567890",   // format: 628xxx (tanpa +)
-    github:    "https://github.com/projekan-id",
+    email:     "project.semua001@gmail.com",
+    whatsapp:  "wa.me/62087880842171",   // format: 628xxx (tanpa +)
+    github:    "https://github.com/ern-sys",
     linkedin:  "",
     instagram: "",
     year:      new Date().getFullYear(),
@@ -130,32 +130,32 @@ const SITE_DATA = {
   /* ── TEAM ───────────────────────────────────────────────── */
   team: [
     {
-      initials: "RK",
-      name:     "Rizky K.",
+      initials: "SR",
+      name:     "Saepul Rahman",
       role:     "Fullstack Developer",
       color:    "linear-gradient(135deg,#1A56FF,#0A36CC)",
       skills:   ["React", "Node.js", "Go"],
     },
     {
-      initials: "DA",
-      name:     "Dian A.",
-      role:     "Backend Engineer",
+      initials: "EI",
+      name:     "Enggar Irawan",
+      role:     "SysAdmin",
       color:    "linear-gradient(135deg,#16A34A,#15803D)",
-      skills:   ["Go", "PostgreSQL", "Redis"],
+      skills:   ["Linux", "Networking", "Python"],
     },
     {
-      initials: "FH",
-      name:     "Fajar H.",
-      role:     "Mobile Developer",
+      initials: "Hasanudin",
+      name:     "Hasanudin",
+      role:     "IT Engineer",
       color:    "linear-gradient(135deg,#D97706,#B45309)",
-      skills:   ["Flutter", "Firebase", "Dart"],
+      skills:   ["MikroTik", "Cisco", "Infrastructure"],
     },
     {
-      initials: "NS",
-      name:     "Nisa S.",
-      role:     "UI/UX + Frontend",
+      initials: "WH",
+      name:     "Wira Harsa",
+      role:     "Digital Marketer",
       color:    "linear-gradient(135deg,#7C3AED,#6D28D9)",
-      skills:   ["Figma", "React", "Tailwind"],
+      skills:   ["Figma", "JS", "Tailwind"],
     },
   ],
 
